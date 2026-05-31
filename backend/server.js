@@ -69,9 +69,13 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`==================================================`);
-  console.log(` OneClick E-Commerce Server running on port ${PORT}`);
-  console.log(` Store Url: http://localhost:${PORT}`);
-  console.log(`==================================================`);
-});
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`==================================================`);
+    console.log(` OneClick E-Commerce Server running on port ${PORT}`);
+    console.log(` Store Url: http://localhost:${PORT}`);
+    console.log(`==================================================`);
+  });
+}
+
+module.exports = app;
