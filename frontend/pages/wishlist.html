@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Wishlist - OneClick</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header></header>
+
+  <main class="container dashboard-layout" style="min-height: 75vh;">
+    
+    <div id="user-sidebar-container"></div>
+
+    <div class="dashboard-content">
+      
+      <div class="dashboard-card">
+        <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;"><i class="fa-solid fa-heart" style="color:var(--danger);"></i> Saved Wishlist Items</h2>
+        
+        <div class="grid-products" id="wishlist-grid-container" style="margin-top: 1rem;">
+          <!-- Loaded dynamically via dashboard.js -->
+          <div class="skeleton" style="height:300px;"></div>
+          <div class="skeleton" style="height:300px;"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/dashboard.js"></script>
+  <script src="/js/shop.js"></script>
+</body>
+</html>

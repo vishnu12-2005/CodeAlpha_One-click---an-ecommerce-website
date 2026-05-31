@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Products - OneClick</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header></header>
+
+  <main class="container" style="margin-top: 2rem; min-height: 70vh;">
+    
+    <h2 id="search-query-title" style="margin-bottom: 1.5rem; display:none; font-size: 1.5rem;">All Products</h2>
+
+    <div style="display:grid; grid-template-columns:250px 1fr; gap:2rem; align-items:start;">
+      
+      <!-- Filters Sidebar -->
+      <aside style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:1rem; padding:1.5rem;">
+        <h3 style="font-size:1.1rem; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.5rem;"><i class="fa-solid fa-filter"></i> Filters</h3>
+        
+        <!-- Category Filter -->
+        <div class="form-group">
+          <label class="form-label" for="filter-category">Category</label>
+          <select class="form-control" id="filter-category">
+            <option value="">All Categories</option>
+            <!-- Loaded dynamically via shop.js -->
+          </select>
+        </div>
+
+        <!-- Sort Filter -->
+        <div class="form-group">
+          <label class="form-label" for="filter-sort">Sort By</label>
+          <select class="form-control" id="filter-sort">
+            <option value="">Default</option>
+            <option value="price_asc">Price: Low to High</option>
+            <option value="price_desc">Price: High to Low</option>
+            <option value="rating_desc">Top Rated</option>
+            <option value="newest">Newest Arrivals</option>
+          </select>
+        </div>
+
+        <!-- Price Range Filter -->
+        <div class="form-group">
+          <label class="form-label">Price Range (₹)</label>
+          <div style="display:flex; gap:0.5rem; align-items:center;">
+            <input type="number" class="form-control" id="filter-min-price" placeholder="Min" min="0" style="padding:0.5rem;" />
+            <span style="color:var(--text-muted);">-</span>
+            <input type="number" class="form-control" id="filter-max-price" placeholder="Max" min="0" style="padding:0.5rem;" />
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="btn-apply-filters" style="width: 100%; margin-top: 1rem;">
+          Apply Filters
+        </button>
+      </aside>
+
+      <!-- Products Grid -->
+      <section>
+        <div class="grid-products" id="products-page-grid">
+          <!-- Loaded dynamically via shop.js -->
+          <div class="skeleton" style="height:350px;"></div>
+          <div class="skeleton" style="height:350px;"></div>
+          <div class="skeleton" style="height:350px;"></div>
+          <div class="skeleton" style="height:350px;"></div>
+          <div class="skeleton" style="height:350px;"></div>
+          <div class="skeleton" style="height:350px;"></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/shop.js"></script>
+</body>
+</html>

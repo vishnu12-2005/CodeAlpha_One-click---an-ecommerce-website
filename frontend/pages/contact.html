@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - OneClick</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header></header>
+
+  <main class="container" style="margin-top: 4rem; min-height: 75vh;">
+    <h1 style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem;">Get in Touch</h1>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: start;">
+      
+      <!-- Info Column -->
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 1.5rem; padding: 2.5rem; display: flex; flex-direction: column; gap: 2rem;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primary);">Contact Details</h2>
+        
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background-color: rgba(37, 99, 235, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 0.95rem;">Our Office</h4>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">123 Admin Lane, E-Commerce HQ</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background-color: rgba(37, 99, 235, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 0.95rem;">General Inquiries</h4>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">support@oneclick.com</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; align-items: center;">
+          <div style="width: 45px; height: 45px; border-radius: 50%; background-color: rgba(37, 99, 235, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 0.95rem;">Hotline Support</h4>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">(555) 123-4567 (Mon-Fri)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Column -->
+      <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 1.5rem; padding: 2.5rem;">
+        <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Send Us a Message</h2>
+        <form onsubmit="event.preventDefault(); API.showToast('Your message has been received! We will contact you soon.', 'success'); this.reset();">
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Full Name</label>
+            <input type="text" class="form-control" id="contact-name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email Address</label>
+            <input type="email" class="form-control" id="contact-email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message</label>
+            <textarea class="form-control" id="contact-message" rows="4" placeholder="How can we help you?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Coupons Dashboard - OneClick</title>
+  <link class="stylesheet" rel="stylesheet" href="/css/style.css">
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border-color); vertical-align: middle; }
+    th { font-family: var(--font-headings); font-weight: 600; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+  <header></header>
+
+  <main class="container dashboard-layout" style="min-height: 75vh;">
+    
+    <div id="admin-sidebar-container"></div>
+
+    <div class="dashboard-content" style="display:grid; grid-template-columns:1fr 1.5fr; gap:2rem; align-items:start;">
+      
+      <!-- Create Coupon Form Panel -->
+      <div class="dashboard-card">
+        <h3 style="font-size:1.25rem; margin-bottom:1.5rem; border-bottom:1px solid var(--border-color); padding-bottom:0.5rem;"><i class="fa-solid fa-plus-circle"></i> Create Coupon</h3>
+        <form id="form-coupon-add">
+          <div class="form-group">
+            <label class="form-label" for="cop-code">Coupon Promo Code</label>
+            <input type="text" class="form-control" id="cop-code" placeholder="e.g. SAVE25" style="text-transform:uppercase;" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cop-discount">Discount Percentage (%)</label>
+            <input type="number" class="form-control" id="cop-discount" min="1" max="100" placeholder="25" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="cop-expiry">Expiration Date</label>
+            <input type="date" class="form-control" id="cop-expiry" required />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top:1rem; height:45px;">Generate Coupon</button>
+        </form>
+      </div>
+
+      <!-- Coupons Database Table -->
+      <div class="dashboard-card" style="padding:1.5rem;">
+        <h3 style="font-size:1.25rem; margin-bottom:1rem; border-bottom:1px solid var(--border-color); padding-bottom:0.5rem;"><i class="fa-solid fa-ticket"></i> Active Coupons</h3>
+        <div style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Code</th>
+                <th>Discount</th>
+                <th>Expiry</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody id="admin-coupons-table">
+              <tr>
+                <td colspan="5" class="skeleton" style="height: 40px;"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - OneClick</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header></header>
+
+  <main class="container" style="margin-top: 3rem; min-height: 75vh;">
+    
+    <h2 style="font-size: 1.8rem; margin-bottom: 2rem; border-bottom:1px solid var(--border-color); padding-bottom:0.5rem;"><i class="fa-solid fa-cart-flatbed-suitcases"></i> Shopping Cart</h2>
+
+    <div class="cart-grid">
+      
+      <!-- Cart Items List -->
+      <section style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:1rem; padding:1rem;" id="cart-items-container">
+        <!-- Loaded dynamically via cart.js -->
+        <div class="skeleton" style="height: 100px; margin-bottom: 1rem;"></div>
+        <div class="skeleton" style="height: 100px;"></div>
+      </section>
+
+      <!-- Cart Calculations -->
+      <aside style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:1rem; padding:2rem; display:flex; flex-direction:column; gap:1.5rem;">
+        <h3 style="font-size:1.2rem; border-bottom:1px solid var(--border-color); padding-bottom:0.5rem;">Summary</h3>
+        
+        <!-- Subtotal -->
+        <div style="display:flex; justify-content:space-between; font-weight:500;">
+          <span style="color:var(--text-muted);">Subtotal</span>
+          <span id="cart-subtotal">₹0.00</span>
+        </div>
+
+        <!-- Coupon code panel -->
+        <div style="border-top:1px dashed var(--border-color); padding-top:1.5rem;">
+          <label class="form-label" for="cart-coupon-input" style="font-size:0.85rem;">Have a promo coupon?</label>
+          <div style="display:flex; gap:0.5rem;">
+            <input type="text" class="form-control" id="cart-coupon-input" placeholder="e.g. WELCOME10" style="text-transform:uppercase;" />
+            <button class="btn btn-secondary" id="btn-apply-coupon">Apply</button>
+          </div>
+        </div>
+
+        <!-- Dynamic coupon row -->
+        <div style="display:none; justify-content:space-between; color:var(--success); font-weight:500;" id="cart-coupon-discount-row">
+          <span>Coupon Discount</span>
+          <span id="cart-coupon-discount-val">-₹0.00</span>
+        </div>
+
+        <!-- Shipping fee -->
+        <div style="display:flex; justify-content:space-between; font-weight:500;">
+          <span style="color:var(--text-muted);">Shipping</span>
+          <span style="color:var(--success);">FREE</span>
+        </div>
+
+        <!-- Total amount -->
+        <div style="display:flex; justify-content:space-between; font-size:1.3rem; font-weight:700; border-top:1px solid var(--border-color); padding-top:1.5rem;">
+          <span>Order Total</span>
+          <span id="cart-total" style="color:var(--primary);">₹0.00</span>
+        </div>
+
+        <!-- Action btn -->
+        <a href="/pages/checkout.html" class="btn btn-primary" id="btn-cart-checkout" style="display:none; justify-content:center; align-items:center; width:100%; margin-top:1rem;">
+          Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/cart.js"></script>
+</body>
+</html>

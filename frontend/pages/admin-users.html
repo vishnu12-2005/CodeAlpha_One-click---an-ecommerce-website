@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Customer Database - OneClick</title>
+  <link class="stylesheet" rel="stylesheet" href="/css/style.css">
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border-color); vertical-align: middle; }
+    th { font-family: var(--font-headings); font-weight: 600; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+  <header></header>
+
+  <main class="container dashboard-layout" style="min-height: 75vh;">
+    
+    <div id="admin-sidebar-container"></div>
+
+    <div class="dashboard-content">
+      
+      <div class="dashboard-card">
+        <h2 style="font-size: 1.5rem;"><i class="fa-solid fa-users-gear"></i> Customer Database Accounts</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Audit user credentials, view system roles, and revoke accounts if required.</p>
+      </div>
+
+      <!-- Users Audit Table -->
+      <div class="dashboard-card" style="padding: 1.5rem;">
+        <div style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>User ID</th>
+                <th>Full Name</th>
+                <th>Email Address</th>
+                <th>Phone</th>
+                <th>Role</th>
+                <th>Revoke Account</th>
+              </tr>
+            </thead>
+            <tbody id="admin-users-table">
+              <tr>
+                <td colspan="6" class="skeleton" style="height: 50px;"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

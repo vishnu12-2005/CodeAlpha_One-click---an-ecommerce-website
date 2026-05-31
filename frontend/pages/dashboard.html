@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard - OneClick</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header></header>
+
+  <main class="container dashboard-layout" style="min-height: 70vh;">
+    
+    <!-- User Menu Sidebar -->
+    <div id="user-sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <div class="dashboard-content">
+      
+      <div class="dashboard-card">
+        <h2 id="dash-welcome" style="font-size: 1.8rem; color: var(--primary);">Welcome Back!</h2>
+        <p style="color: var(--text-muted); margin-top: 0.25rem;">From your dashboard, you can track orders, edit profile parameters, and manage saved items.</p>
+      </div>
+
+      <!-- Quick Metrics Counters -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div>
+            <div class="stat-label">Total Orders</div>
+            <div class="stat-val" id="dash-count-orders">0</div>
+          </div>
+          <div class="stat-icon"><i class="fa-solid fa-box"></i></div>
+        </div>
+        <div class="stat-card">
+          <div>
+            <div class="stat-label">Wishlist Items</div>
+            <div class="stat-val" id="dash-count-wishlist">0</div>
+          </div>
+          <div class="stat-icon" style="background-color:rgba(239,68,68,0.1); color:var(--danger);"><i class="fa-solid fa-heart"></i></div>
+        </div>
+      </div>
+
+      <!-- Recent Orders List -->
+      <div class="dashboard-card">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;"><i class="fa-solid fa-clock-rotate-left"></i> Recent Orders</h3>
+        <div id="dash-recent-orders">
+          <div class="skeleton" style="height: 50px; margin-bottom: 0.5rem;"></div>
+          <div class="skeleton" style="height: 50px;"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

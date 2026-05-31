@@ -1,0 +1,311 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin User",
+      "email": "admin@oneclick.com",
+      "password": "$2a$10$gnIjlJVQjTFVSEAoTlL4aOvstp76tHr817eNhwFUok2GlGrGaw35m",
+      "phone": "1234567890",
+      "address": "123 Admin Lane, HQ",
+      "role": "admin",
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": "user@oneclick.com",
+      "password": "$2a$10$Y1QaichYojxgvaROVECGne7zWknUEf7q7cMjcUKBR8LjmldOOq/Xa",
+      "phone": "9876543210",
+      "address": "456 Client Boulevard, Apt 4B",
+      "role": "customer",
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Durga Prasad Rangapuri",
+      "email": "durgarangapuri2004@gmail.com",
+      "password": "$2a$10$mP.yV2JV5Adsy.nW82I.xOSs9a1By2EuKrm9QtQKn2w0jQmgYO4/i",
+      "phone": "+919493991248",
+      "address": "AT Agraharam",
+      "role": "customer",
+      "created_at": "2026-05-30T07:42:17.872Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=500"
+    },
+    {
+      "id": 2,
+      "name": "Fashion",
+      "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500"
+    },
+    {
+      "id": 3,
+      "name": "Books",
+      "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500"
+    },
+    {
+      "id": 4,
+      "name": "Home & Kitchen",
+      "image": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500"
+    },
+    {
+      "id": 5,
+      "name": "Groceries",
+      "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500"
+    },
+    {
+      "id": 6,
+      "name": "Beauty",
+      "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500"
+    },
+    {
+      "id": 7,
+      "name": "Sports",
+      "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=500"
+    },
+    {
+      "id": 8,
+      "name": "Toys",
+      "image": "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=500"
+    },
+    {
+      "id": 9,
+      "name": "Mobile Accessories",
+      "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "category_id": 1,
+      "category_name": "Electronics",
+      "name": "Premium Wireless Headphones",
+      "description": "Noise-cancelling over-ear wireless headphones with deep bass and 40-hour battery life.",
+      "price": 15999,
+      "discount": 15,
+      "stock": 50,
+      "image": "https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=500&utm_source=chatgpt.com",
+      "rating": 4.5,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "category_id": 1,
+      "category_name": "Electronics",
+      "name": "Smartwatch Series 8 Pro",
+      "description": "Waterproof fitness tracker with heart rate monitor, sleep tracking, and built-in GPS.",
+      "price": 19999,
+      "discount": 10,
+      "stock": 30,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500",
+      "rating": 4.2,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "category_id": 1,
+      "category_name": "Electronics",
+      "name": "4K Ultra HD Projector",
+      "description": "Mini portable home theater projector with 8000 lumens, keystone correction, and HDMI support.",
+      "price": 9999,
+      "discount": 0,
+      "stock": 15,
+      "image": "https://images.unsplash.com/photo-1535016120720-40c646be5580?w=500",
+      "rating": 4,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "category_id": 2,
+      "category_name": "Fashion",
+      "name": "Classic Leather Jacket",
+      "description": "Mens premium quality genuine leather motorcycle jacket in sleek black.",
+      "price": 6999,
+      "discount": 20,
+      "stock": 25,
+      "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500",
+      "rating": 4.7,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "category_id": 2,
+      "category_name": "Fashion",
+      "name": "Minimalist Quartz Watch",
+      "description": "Elegant watch featuring a leather strap, clean dial, and water resistance up to 30m.",
+      "price": 3999,
+      "discount": 5,
+      "stock": 40,
+      "image": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=500",
+      "rating": 4.4,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "category_id": 3,
+      "category_name": "Books",
+      "name": "Atomic Habits",
+      "description": "An easy and proven way to build good habits and break bad ones by James Clear.",
+      "price": 399,
+      "discount": 10,
+      "stock": 100,
+      "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500",
+      "rating": 4.9,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "category_id": 4,
+      "category_name": "Home & Kitchen",
+      "name": "Programmable Drip Coffee Maker",
+      "description": "12-cup glass carafe coffee maker with automatic shutoff and brew strength selector.",
+      "price": 2999,
+      "discount": 0,
+      "stock": 20,
+      "image": "https://images.unsplash.com/photo-1518057111178-44a106bad636?w=500",
+      "rating": 4.1,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "category_id": 4,
+      "category_name": "Home & Kitchen",
+      "name": "Digital Air Fryer 5.8QT",
+      "description": "XL air fryer oven with 8 presets, digital touchscreen, and non-stick basket.",
+      "price": 5999,
+      "discount": 12,
+      "stock": 18,
+      "image": "https://images.unsplash.com/photo-1621972750749-0fbb1abb7736?w=500",
+      "rating": 4.6,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "category_id": 5,
+      "category_name": "Groceries",
+      "name": "Organic Matcha Green Tea Powder",
+      "description": "100% USDA organic culinary grade green tea powder, rich in antioxidants.",
+      "price": 999,
+      "discount": 0,
+      "stock": 60,
+      "image": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500",
+      "rating": 4.8,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "category_id": 6,
+      "category_name": "Beauty",
+      "name": "Hydrating Serum (Hyaluronic Acid)",
+      "description": "Moisturizing face serum designed to replenish skin hydration and reduce fine lines.",
+      "price": 1299,
+      "discount": 15,
+      "stock": 75,
+      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500",
+      "rating": 4.5,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 11,
+      "category_id": 7,
+      "category_name": "Sports",
+      "name": "Ergonomic Yoga Mat",
+      "description": "Non-slip, extra thick fitness mat for home exercises, yoga, and pilates.",
+      "price": 1499,
+      "discount": 10,
+      "stock": 45,
+      "image": "https://images.unsplash.com/photo-1592432678016-e910b452f9a2?w=500",
+      "rating": 4.3,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 12,
+      "category_id": 8,
+      "category_name": "Toys",
+      "name": "STEM Robotics Construction Kit",
+      "description": "Educational build-your-own robot set with programmable movements for kids.",
+      "price": 4499,
+      "discount": 5,
+      "stock": 12,
+      "image": "https://images.unsplash.com/photo-1546776310-eef45dd6d63c?w=500",
+      "rating": 4.5,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 13,
+      "category_id": 9,
+      "category_name": "Mobile Accessories",
+      "name": "Magnetic Wireless Charger (15W)",
+      "description": "Fast charger stand compatible with latest MagSafe iPhones and devices.",
+      "price": 2499,
+      "discount": 10,
+      "stock": 80,
+      "image": "https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=500",
+      "rating": 4.4,
+      "created_at": "2026-05-30T12:00:00.000Z"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 3,
+      "user_id": 2,
+      "product_id": 2
+    }
+  ],
+  "cart": [
+    {
+      "id": 3,
+      "user_id": 2,
+      "product_id": 1,
+      "quantity": 1
+    }
+  ],
+  "orders": [],
+  "order_items": [],
+  "reviews": [
+    {
+      "id": 1,
+      "user_id": 2,
+      "user_name": "Jane Doe",
+      "product_id": 1,
+      "rating": 5,
+      "comment": "Absolutely love these! The noise cancellation is perfect for focus.",
+      "status": "Approved",
+      "created_at": "2026-05-30T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "user_name": "Jane Doe",
+      "product_id": 2,
+      "rating": 4,
+      "comment": "Very good smartwatch. Health tracking features work flawlessly.",
+      "status": "Approved",
+      "created_at": "2026-05-30T12:00:00.000Z"
+    }
+  ],
+  "coupons": [
+    {
+      "id": 1,
+      "code": "WELCOME10",
+      "discount": 10,
+      "expiry_date": "2026-12-31"
+    },
+    {
+      "id": 2,
+      "code": "ONECLICK20",
+      "discount": 20,
+      "expiry_date": "2026-12-31"
+    },
+    {
+      "id": 3,
+      "code": "SUPER30",
+      "discount": 30,
+      "expiry_date": "2026-12-31"
+    }
+  ]
+}

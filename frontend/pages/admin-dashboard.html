@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Overview Dashboard - OneClick</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border-color); }
+    th { font-family: var(--font-headings); font-weight: 600; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+  <header></header>
+
+  <main class="container dashboard-layout" style="min-height: 75vh;">
+    
+    <!-- Admin Sidebar -->
+    <div id="admin-sidebar-container"></div>
+
+    <!-- Admin Content Area -->
+    <div class="dashboard-content">
+      
+      <div class="dashboard-card">
+        <h2 style="font-size: 1.8rem; color: var(--primary);">System Overview</h2>
+        <p style="color: var(--text-muted); margin-top: 0.25rem;">Live analytical updates of shop orders, revenues, and users database activity.</p>
+      </div>
+
+      <!-- Quick Metrics Counters -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div>
+            <div class="stat-label">Total Revenue</div>
+            <div class="stat-val" id="admin-overview-revenue" style="color:var(--success); font-size: 1.6rem;">₹0.00</div>
+          </div>
+          <div class="stat-icon" style="background-color:rgba(16,185,129,0.1); color:var(--success);"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+        </div>
+        <div class="stat-card">
+          <div>
+            <div class="stat-label">Customer Orders</div>
+            <div class="stat-val" id="admin-overview-orders">0</div>
+          </div>
+          <div class="stat-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        </div>
+        <div class="stat-card">
+          <div>
+            <div class="stat-label">Registered Customers</div>
+            <div class="stat-val" id="admin-overview-users">0</div>
+          </div>
+          <div class="stat-icon" style="background-color:rgba(37,99,235,0.1); color:var(--primary);"><i class="fa-solid fa-users"></i></div>
+        </div>
+      </div>
+
+      <!-- Top Selling Products Table -->
+      <div class="dashboard-card">
+        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;"><i class="fa-solid fa-chart-line"></i> Top 5 Best Sellers</h3>
+        <div style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Prod ID</th>
+                <th>Name</th>
+                <th>Units Sold</th>
+                <th>Total Revenue</th>
+              </tr>
+            </thead>
+            <tbody id="admin-top-selling-table">
+              <tr class="skeleton" style="height: 40px;">
+                <td colspan="4"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

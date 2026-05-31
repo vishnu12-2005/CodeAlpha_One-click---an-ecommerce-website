@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detailed Sales Analytics - OneClick</title>
+  <link class="stylesheet" rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header></header>
+
+  <main class="container dashboard-layout" style="min-height: 75vh;">
+    
+    <div id="admin-sidebar-container"></div>
+
+    <div class="dashboard-content">
+      
+      <div class="dashboard-card">
+        <h2 style="font-size: 1.5rem;"><i class="fa-solid fa-chart-pie"></i> Detailed Sales & Revenue Reports</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Granular reports breaking down category revenues, sales volumes, and peak activities.</p>
+      </div>
+
+      <!-- Analytics dynamic report panel -->
+      <section id="admin-detailed-reports">
+        <div class="skeleton" style="height: 300px;"></div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

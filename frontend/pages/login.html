@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to OneClick</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <header></header>
+
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h2>Welcome Back</h2>
+        <p>Login to track orders and save your cart.</p>
+      </div>
+
+      <form id="form-login">
+        <div class="form-group">
+          <label class="form-label" for="login-email">Email Address</label>
+          <input type="email" class="form-control" id="login-email" placeholder="name@example.com" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <label class="form-label" for="login-password" style="margin-bottom:0;">Password</label>
+            <a href="/pages/forgot-password.html" style="font-size:0.8rem; color:var(--primary);">Forgot Password?</a>
+          </div>
+          <input type="password" class="form-control" id="login-password" placeholder="••••••••" required style="margin-top:0.5rem;" autocomplete="current-password" />
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:1rem;">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In
+        </button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="/pages/register.html">Sign Up</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Reviews Moderation - OneClick</title>
+  <link class="stylesheet" rel="stylesheet" href="/css/style.css">
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border-color); vertical-align: middle; }
+    th { font-family: var(--font-headings); font-weight: 600; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+  <header></header>
+
+  <main class="container dashboard-layout" style="min-height: 75vh;">
+    
+    <div id="admin-sidebar-container"></div>
+
+    <div class="dashboard-content">
+      
+      <div class="dashboard-card">
+        <h2 style="font-size: 1.5rem;"><i class="fa-solid fa-comments"></i> Product Reviews Moderation</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Approve customer review entries to update product ratings, or remove spam reviews.</p>
+      </div>
+
+      <!-- Reviews Moderation Table -->
+      <div class="dashboard-card" style="padding:1.5rem;">
+        <div style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Product & Buyer</th>
+                <th>Stars</th>
+                <th>Comment</th>
+                <th>Status</th>
+                <th>Mod Actions</th>
+              </tr>
+            </thead>
+            <tbody id="admin-reviews-table">
+              <tr>
+                <td colspan="6" class="skeleton" style="height: 50px;"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

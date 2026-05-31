@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Categories - OneClick</title>
+  <link class="stylesheet" rel="stylesheet" href="/css/style.css">
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border-color); vertical-align: middle; }
+    th { font-family: var(--font-headings); font-weight: 600; color: var(--text-muted); }
+    .modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15,23,42,0.85); display: none; align-items: center; justify-content: center; z-index: 1000; padding: 1.5rem; backdrop-filter: blur(5px); }
+    .modal-content { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 1rem; width: 100%; max-width: 450px; padding: 2rem; }
+  </style>
+</head>
+<body>
+
+  <header></header>
+
+  <main class="container dashboard-layout" style="min-height: 75vh;">
+    
+    <div id="admin-sidebar-container"></div>
+
+    <div class="dashboard-content">
+      
+      <div class="dashboard-card" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <h2 style="font-size: 1.5rem;"><i class="fa-solid fa-list-ul"></i> Product Categories</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Add, edit, or delete catalog category labels.</p>
+        </div>
+        <button class="btn btn-primary" onclick="openAddCategoryModal()"><i class="fa-solid fa-plus"></i> Add Category</button>
+      </div>
+
+      <!-- Categories Table -->
+      <div class="dashboard-card" style="padding: 1.5rem;">
+        <div style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Icon Image</th>
+                <th>Name</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="admin-categories-table">
+              <tr>
+                <td colspan="4" class="skeleton" style="height: 40px;"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Category CRUD Modal -->
+  <div class="modal" id="category-modal">
+    <div class="modal-content">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; border-bottom:1px solid var(--border-color); padding-bottom:0.5rem;">
+        <h3 id="category-modal-title" style="font-size: 1.25rem;">Add Category</h3>
+        <button onclick="document.getElementById('category-modal').style.display='none'" style="background:none; border:none; color:white; cursor:pointer; font-size:1.25rem;"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <form id="form-category-crud">
+        <input type="hidden" id="cat-id" />
+        
+        <div class="form-group">
+          <label class="form-label" for="cat-name">Category Name</label>
+          <input type="text" class="form-control" id="cat-name" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cat-image">Icon / Image URL</label>
+          <input type="url" class="form-control" id="cat-image" placeholder="https://unsplash.com/..." />
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; height:45px;">
+          Save Category
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

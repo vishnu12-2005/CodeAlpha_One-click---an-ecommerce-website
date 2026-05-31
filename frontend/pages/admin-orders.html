@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Orders Management - OneClick</title>
+  <link class="stylesheet" rel="stylesheet" href="/css/style.css">
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border-color); vertical-align: middle; }
+    th { font-family: var(--font-headings); font-weight: 600; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+  <header></header>
+
+  <main class="container dashboard-layout" style="min-height: 75vh;">
+    
+    <div id="admin-sidebar-container"></div>
+
+    <div class="dashboard-content">
+      
+      <div class="dashboard-card">
+        <h2 style="font-size: 1.5rem;"><i class="fa-solid fa-file-invoice-dollar"></i> Customer Orders</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Monitor status, edit order stages, and track processing steps.</p>
+      </div>
+
+      <!-- Orders Listings Table -->
+      <div class="dashboard-card" style="padding: 1.5rem;">
+        <div style="overflow-x: auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Date Placed</th>
+                <th>Total</th>
+                <th>Method</th>
+                <th>Status Stage</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody id="admin-orders-table">
+              <tr>
+                <td colspan="7" class="skeleton" style="height: 50px;"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer></footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
